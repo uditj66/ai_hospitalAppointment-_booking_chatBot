@@ -81,7 +81,7 @@ export default function ChatBot() {
     try {
       await simulateTyping('Thank you for providing all the information! Let me submit your appointment request...');
       
-      const response = await fetch('https://uditj66.app.n8n.cloud/webhook-test/api/book', {
+      const response = await fetch(import.meta.env.n8n_url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
